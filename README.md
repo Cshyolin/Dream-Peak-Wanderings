@@ -6,11 +6,11 @@
 
 ## 致谢
 
-@乾元：原作、脚本
+[@乾元](https://space.bilibili.com/366080459)：原作、脚本
 
 [@上白泽晓林](https://github.com/Cshyolin)：程序
 
-@dairi：立绘
+[@dairi](https://www.pixiv.net/users/4920496/artworks)：立绘
 
 GPT Image：部分美术资源生成
 
