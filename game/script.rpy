@@ -3,14 +3,18 @@ image pure_black = "#000000"
 image logo = Transform("logo.png", size=(450,450), fit = "contain")
 label splashscreen:
     scene pure_white
-    show pure_white with Dissolve(2.0)
-    show logo at truecenter with Dissolve(2.0)
-    pause 1.0
-    hide logo with Dissolve(2.0)
+    show pure_white with Dissolve(1.0)
+    show logo at truecenter with Dissolve(1.5)
+    pause 1.5
+    hide logo with Dissolve(1.5)
 
     return
 
 # 声明此游戏使用的角色。颜色参数可使角色姓名着色。
+
+
+init python:
+    config.auto_voice = "voice/{id}.ogg
 
 init:
     $ center_image = Position(xpos=0.5, ypos=1.18)
@@ -75,16 +79,22 @@ label test:
 
     # 此处显示各行对话。
     show sakuya normal at center_image
-    sakuya "您已创建一个新的 Ren'Py 游戏。"
 
+    #play voice "test_c6bd8c7c.wav"
+    sakuya "您已创建一个新的游戏。"
+
+    #voice "test-sakuya-2.wav"
     sakuya happy "当您完善了故事、图片和音乐之后，您就可以向全世界发布了！"
 
     show sakuya normal at center_image:
         happy_jump
         pause 0.5
+    
+    #voice "test-sakuya-3.wav"
     sakuya "啊！"
     show sakuya happy:
         linear 0.5 xpos 0.15
+    #voice "test-sakuya-4.wav"
     sakuya "大小姐在叫我了！"
 
     return
