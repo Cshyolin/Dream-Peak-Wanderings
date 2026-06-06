@@ -14,7 +14,7 @@ label splashscreen:
 
 
 init python:
-    config.auto_voice = "voice/{id}.ogg
+    config.auto_voice = "voice/{id}.ogg"
 
 init:
     $ center_image = Position(xpos=0.5, ypos=1.18)
@@ -51,6 +51,12 @@ transform walk_fast:
 
 define e = Character("艾琳", image = "eileen")
 define sakuya = Character("十六夜咲夜", image = "sakuya", who_color = "#1e90ff")
+define knowledge = Character("帕秋莉·诺蕾姬", image = "knowledge", who_color = "#ba55d3")
+define aya = Character("射命丸文", image = "aya", who_color = "#d2691e")
+define meiling = Character("红美铃", image = "meiling", who_color = "#ff0000")
+define reimu = Character("博丽灵梦", image = "reimu", who_color = "#b22222")
+define remilia = Character("蕾米莉亚·斯卡雷特", image = "remilia", who_color = "#dc143c")
+define sun = Character("孙美天", image = "sun", who_color = "#227b22")
 
 
 # 游戏在此开始。
@@ -66,6 +72,8 @@ label start:
     menu:
         "测试片段":
             jump test
+        "高考祝福":
+            jump exam
         "正式剧情":
             return
 
@@ -96,5 +104,28 @@ label test:
         linear 0.5 xpos 0.15
     #voice "test-sakuya-4.wav"
     sakuya "大小姐在叫我了！"
+
+    return
+
+label exam:
+    scene bg library with dissolve
+    show knowledge normal at center_image
+    show meiling normal at left_image
+    show sakuya normal at right_image
+
+    knowledge "外面世界的年轻人，每年都会面对一场名为高考的试炼呢"
+    sakuya serious "是啊，听说就在这几天。"
+    sakuya "希望他们都能顺利把积累的实力好好发挥出来。"
+    meiling unhappy "不过一年的时间会不会太短了？"
+    sakuya relieved "别这么说，他们可是准备了三年甚至更久呢。"
+    sakuya "对他们来说，这不仅是一场测试，也是一场事关人生的重要分类"
+    knowledge relieved "愿意用这么长的时间积累知识，这份努力值得我们的尊敬。"
+    meiling happy "那我们需要做的，就是为他们祈福了吧！"
+    sakuya happy "高考结束后，记得来焦作玩哦！"
+    sakuya "下半年的焦作东方活动应该会在十一期间举行哦!"
+    show meiling confused
+    knowledge surprised "笑夜，你在说什么？"
+
+    scene pure_black with fade
 
     return
