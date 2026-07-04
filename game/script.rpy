@@ -72,10 +72,10 @@ label start:
     menu:
         "测试片段":
             jump test
-        "高考祝福":
-            jump exam
+        #"高考祝福":
+        #    jump exam
         "正式剧情":
-            return
+            jump act1
 
 
 label test:
@@ -107,25 +107,25 @@ label test:
 
     return
 
-label exam:
-    scene bg library with dissolve
-    show knowledge normal at center_image
-    show meiling normal at left_image
-    show sakuya normal at right_image
-
-    knowledge "外面世界的年轻人，每年都会面对一场名为高考的试炼呢"
-    sakuya serious "是啊，听说就在这几天。"
-    sakuya "希望他们都能顺利把积累的实力好好发挥出来。"
-    meiling unhappy "不过一年的时间会不会太短了？"
-    sakuya relieved "别这么说，他们可是准备了三年甚至更久呢。"
-    sakuya "对他们来说，这不仅是一场测试，也是一场事关人生的重要分类"
-    knowledge relieved "愿意用这么长的时间积累知识，这份努力值得我们的尊敬。"
-    meiling happy "那我们需要做的，就是为他们祈福了吧！"
-    sakuya happy "高考结束后，记得来焦作玩哦！"
-    sakuya "下半年的焦作东方活动应该会在十一期间举行哦!"
-    show meiling confused
-    knowledge surprised "笑夜，你在说什么？"
-
-    scene pure_black with fade
-
-    return
+#label exam:
+#    scene bg library with dissolve
+#    show knowledge normal at center_image
+#    show meiling normal at left_image
+#    show sakuya normal at right_image
+#
+#    knowledge "外面世界的年轻人，每年都会面对一场名为高考的试炼呢"
+#    sakuya serious "是啊，听说就在这几天。"
+#    sakuya "希望他们都能顺利把积累的实力好好发挥出来。"
+#    meiling unhappy "不过一年的时间会不会太短了？"
+#    sakuya relieved "别这么说，他们可是准备了三年甚至更久呢。"
+#    sakuya "对他们来说，这不仅是一场测试，也是一场事关人生的重要分类"
+#    knowledge relieved "愿意用这么长的时间积累知识，这份努力值得我们的尊敬。"
+#    meiling happy "那我们需要做的，就是为他们祈福了吧！"
+#    sakuya happy "高考结束后，记得来焦作玩哦！"
+#    sakuya "下半年的焦作东方活动应该会在十一期间举行哦!"
+#    show meiling confused
+#    knowledge surprised "笑夜，你在说什么？"
+#
+#    scene pure_black with fade
+#
+#    return

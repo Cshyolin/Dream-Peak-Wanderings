@@ -24,3 +24,13 @@
 /dialogue.tab
 /dialogue.txt
 /strings.json
+
+# Art Resources.
+/scripts
+/game/audio
+
+# Other floders
+/.claude
+
+#Format Converter
+convert.ps1
